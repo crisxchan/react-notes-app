@@ -32,6 +32,15 @@ function App() {
       ? {...oldNote, body: text} 
       : oldNote
     }))
+    setNotes(oldNotes => {
+      const arrangedNote = []
+      oldNotes.forEach((oldNote, i) => {
+        if(oldNote.id === currentNoteId) arrangedNote.unshift({...oldNote, body: text})
+        else arrangedNote.push(oldNote)
+      })
+
+      return arrangedNote
+    })
   }
 
   function findCurrentNote() {
