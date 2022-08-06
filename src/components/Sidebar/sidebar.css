@@ -1,0 +1,65 @@
+.delete-btn {
+    background: #EFEFEF;
+    border: none;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    transition: 200ms ease-in-out;
+}
+
+.delete-btn:hover {
+    transform: scale(1.2);
+}
+
+.trash-icon {
+    cursor: pointer;
+}
+
+.gg-trash {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 10px;
+    height: 12px;
+    border: 2px solid gainsboro;
+    box-shadow:
+        0 0 0 2px grey,
+        inset -2px 0 0 grey,
+        inset 2px 0 0 grey;
+    border-bottom-left-radius: 1px;
+    border-bottom-right-radius: 1px;
+    margin-top: 4px
+}
+
+.gg-trash::after,
+.gg-trash::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute
+}
+
+.gg-trash::after {
+    background: grey;
+    border-radius: 3px;
+    width: 16px;
+    height: 2px;
+    top: -4px;
+    left: -5px
+}
+
+.gg-trash::before {
+    width: 10px;
+    height: 4px;
+    border: 2px solid grey;
+    border-bottom: grey;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    top: -7px;
+    left: -2px
+} 

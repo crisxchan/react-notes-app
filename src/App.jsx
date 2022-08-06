@@ -43,6 +43,10 @@ function App() {
     })
   }
 
+  function deleteNote(noteId) {
+    setNotes(prevNotes => prevNotes.filter(note => note.id !== noteId))
+  }
+
   function findCurrentNote() {
     return notes.find(note => {
       return note.id === currentNoteId
@@ -64,6 +68,7 @@ function App() {
           currentNote={findCurrentNote()}
           setCurrentNoteId={setCurrentNoteId}
           newNote={createNewNote}
+          deleteNote={deleteNote}
         />
         {
           currentNoteId && notes.length > 0 && 
