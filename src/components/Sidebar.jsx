@@ -1,5 +1,3 @@
-import './sidebar.css'
-
 export default function Sidebar(props) {
     const noteElements = props.notes.map(note => (
         <div key={note.id}>
@@ -16,7 +14,7 @@ export default function Sidebar(props) {
                     className="delete-btn"
                     onClick={() => props.deleteNote(note.id)}
                 >
-                    <i className="gg-trash trash-icon"></i>
+                    <i className="gg-trash"></i>
                 </button>
             </div>
         </div>
