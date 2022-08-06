@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
-import Sidebar from './components/Sidebar/Sidebar'
-import Editor from './components/Editor/Editor'
+import Sidebar from './components/Sidebar'
+import Editor from './components/Editor'
 import Split  from 'react-split'
 import { nanoid } from 'nanoid'
 import './App.css'
